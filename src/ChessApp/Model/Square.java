@@ -8,6 +8,9 @@ import java.awt.*;
 import java.io.Serializable;
 import java.util.Comparator;
 
+/**
+ * Clase de cuadros del tablero
+ */
 public class Square implements Serializable {
     private String  number;
     private String  character;
@@ -22,7 +25,7 @@ public class Square implements Serializable {
         return number;
     }
 
-    public void setNumber(String number) {
+    protected void setNumber(String number) {
         this.number = number;
     }
 
@@ -30,7 +33,7 @@ public class Square implements Serializable {
         return character;
     }
 
-    public void setCaracter(String character) {
+    private void setCaracter(String character) {
         this.character = character;
     }
 
@@ -38,7 +41,7 @@ public class Square implements Serializable {
         return cardinal;
     }
 
-    public void setCardinal(String cardinal) {
+    private void setCardinal(String cardinal) {
         this.cardinal = cardinal;
     }
 
@@ -46,7 +49,7 @@ public class Square implements Serializable {
         return color;
     }
 
-    public void setColor(Color color) {
+    private void setColor(Color color) {
         this.color = color;
     }
 
@@ -64,6 +67,10 @@ public class Square implements Serializable {
         this.cardinal   = character+number;
     }
 
+    /**
+     * Indica si esta instancia de cuadro esta ocupada por una pieza
+     * @return TRUE si esta esta ocupada
+     */
     public boolean isOccupated() {
         return this.piecePlaced!=null;
     }
