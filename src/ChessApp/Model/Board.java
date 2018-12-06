@@ -2,18 +2,16 @@ package ChessApp.Model;
 
 import ChessApp.Builder.SquareFactory;
 
-import java.util.Iterator;
-import java.util.SortedSet;
+import java.util.Map;
 
-public class Board implements Iterable<Square>{
-    static SortedSet<Square> squares;
+public class Board {
+    static Map<String,Square> squares;
 
     public Board() {
         squares = SquareFactory.BuildUpSqueres();
     }
 
-    @Override
-    public Iterator<Square> iterator() {
-        return squares.iterator();
+    public static Map<String, Square> getSquares() {
+        return squares;
     }
 }

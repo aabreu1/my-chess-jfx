@@ -3,7 +3,6 @@ package ChessApp.Builder;
 import ChessApp.Abstrac.Side;
 import ChessApp.Model.Piece;
 import ChessApp.Type.PieceType;
-import ChessApp.Type.SideType;
 import ChessApp.implementation.BlackSide;
 import ChessApp.implementation.WhiteSide;
 

@@ -1,6 +1,5 @@
 package ChessApp.Controll;
 
-import ChessApp.Model.Board;
 import ChessApp.Model.Piece;
 
 import java.util.ArrayList;

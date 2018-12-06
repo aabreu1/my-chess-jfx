@@ -6,16 +6,11 @@ import com.sun.istack.internal.Nullable;
 
 import java.awt.*;
 import java.io.Serializable;
-import java.util.Comparator;
-
-import static java.util.Comparator.comparing;
 
 /**
  * Clase de cuadros del tablero
  */
 public class Square implements Serializable{
-
-    public static Comparator<Square> BY_CARDINAL = comparing(Square::getCardinal);
 
     private String  number;
     private String  character;
@@ -81,6 +76,7 @@ public class Square implements Serializable{
     }
 
     public String occupatedBy() { return this.piecePlaced!=null ? piecePlaced.getName() : "Empty"; }
+
     public String playInfo() { return this.cardinal+"["+occupatedBy()+"]";}
 
     @Override

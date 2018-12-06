@@ -2,19 +2,20 @@ package ChessApp.Builder;
 
 import ChessApp.Model.Square;
 
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class SquareFactory {
 
-    public static SortedSet<Square> BuildUpSqueres(){
-        SortedSet<Square> squares = new TreeSet<>(Square.BY_CARDINAL);
+    public static Map<String,Square> BuildUpSqueres(){
+        Map<String,Square> squares = new HashMap<String,Square>();
         String rows = "ABCDEFGH";
         for (int column = 1; column <= 8; column ++){
             for (int row = 0; row < rows.length(); row ++){
                 String character    = String.valueOf(rows.charAt(row));
                 String number       = String.valueOf(column);
-                squares.add(new Square(character, number));
+                squares.put(character+number,new Square(character, number));
             }
         }
         return squares;
