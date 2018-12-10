@@ -3,14 +3,16 @@ package ChessApp.Model;
 
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
+import javafx.scene.layout.StackPane;
 
 import java.awt.*;
 import java.io.Serializable;
+import java.util.Iterator;
 
 /**
  * Clase de cuadros del tablero
  */
-public class Square implements Serializable{
+public class Square extends StackPane implements Serializable{
 
     private String  number;
     private String  character;

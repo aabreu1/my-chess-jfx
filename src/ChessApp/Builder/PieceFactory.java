@@ -1,6 +1,7 @@
 package ChessApp.Builder;
 
 import ChessApp.Abstrac.Side;
+import ChessApp.Model.BoardController;
 import ChessApp.Model.Piece;
 import ChessApp.Type.PieceType;
 import ChessApp.implementation.BlackSide;
@@ -11,12 +12,12 @@ import java.util.List;
 
 public class PieceFactory {
 
-    public static List<Piece> BuildUpGameSetPieces(){
+    public static List<Piece> BuildUpSetPieces(BoardController board){
         List<Piece> pieces = new ArrayList<>();
         for (PieceType piece : PieceType.values()) {
-            pieces.add(create(piece, BlackSide.instance()));
-            pieces.add(create(piece, WhiteSide.instance()));
-        }
+                    pieces.add(create(piece, BlackSide.instance()));
+                    pieces.add(create(piece, WhiteSide.instance()));
+            }
         return pieces;
     }
 

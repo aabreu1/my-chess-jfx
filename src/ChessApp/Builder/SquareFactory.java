@@ -2,20 +2,26 @@ package ChessApp.Builder;
 
 import ChessApp.Model.Square;
 
+import java.security.PublicKey;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class SquareFactory {
+    public static String COLUMNS = "ABCDEFGH";
+    public static String COLUMNS_INVERT = "HGFEDCBA";
 
     public static Map<String,Square> BuildUpSqueres(){
         Map<String,Square> squares = new HashMap<String,Square>();
-        String rows = "ABCDEFGH";
-        for (int column = 1; column <= 8; column ++){
-            for (int row = 0; row < rows.length(); row ++){
-                String character    = String.valueOf(rows.charAt(row));
-                String number       = String.valueOf(column);
-                squares.put(character+number,new Square(character, number));
+        boolean color = true;
+        for (int row = 1; row <= 8; row ++){
+            for (int column = 0; column < COLUMNS.length(); column ++){
+                String character    = String.valueOf(COLUMNS.charAt(column));
+                String number       = String.valueOf(row);
+                Square square = new Square(character, number);
+                square.setStyle("-fx-background-color:"+(color ? "white" : "black"));
+                color = !color;
+                squares.put(square.getCardinal(), square);
             }
         }
         return squares;

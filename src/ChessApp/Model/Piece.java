@@ -1,6 +1,7 @@
 package ChessApp.Model;
 
 import ChessApp.Abstrac.Side;
+import ChessApp.Main;
 import ChessApp.Type.PieceType;
 
 import java.io.Serializable;
@@ -19,12 +20,12 @@ public class Piece implements Serializable{
     private String        movementPattern;
     private Set<Movement> movements;
 
-    public Piece(PieceType piece, Side side){
-        this.name       = piece.get();
-        this.notation   = piece != PieceType.PAWN ? piece.get().charAt(0) : Character.MIN_VALUE;
-        this.piece      = piece;
+    public Piece(PieceType pieceType, Side side){
+        this.name       = pieceType.get();
+        this.notation   = pieceType != PieceType.PAWN ? pieceType.get().charAt(0) : Character.MIN_VALUE;
+        this.piece      = pieceType;
         this.side       = side;
-      //  this.score      = Integer.parseInt(Main.BUNDLE_SCORE.getString(piece.get()));
+        //this.score    = Integer.parseInt(Main.BUNDLE_SCORE.getString(pieceType.get()));
       //  this.movementPattern = Main.BUNDLE_PATTERN.getString(piece.get());
     }
 
