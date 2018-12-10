@@ -4,10 +4,9 @@ package ChessApp.Model;
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
 import javafx.scene.layout.StackPane;
-
-import java.awt.*;
+import java.awt.Color;
 import java.io.Serializable;
-import java.util.Iterator;
+import javafx.scene.control.Label;
 
 /**
  * Clase de cuadros del tablero
@@ -22,6 +21,8 @@ public class Square extends StackPane implements Serializable{
     private Color   color;
     @Nullable
     private Piece   piecePlaced;
+
+    public Label text = new Label();
 
     public String getNumber() {
         return number;
@@ -64,9 +65,11 @@ public class Square extends StackPane implements Serializable{
     }
 
     public Square (String character, String number){
+        super();
         this.number     = number;
         this.character  = character;
         this.cardinal   = character+number;
+        this.getChildren().add(text);
     }
 
     /**

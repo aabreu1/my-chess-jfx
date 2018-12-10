@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-public class BoardController implements Initializable {
+public class Board implements Initializable {
 
     @FXML
     private StackPane board;
@@ -20,12 +20,20 @@ public class BoardController implements Initializable {
 
     static Map<String,Square> squares;
 
-    public BoardController() {
+    public Board() {
         squares = SquareFactory.BuildUpSqueres();
-        loadFXML();
+        try {
+            loadFXML();
+        }   catch (Exception e){
+            System.err.println(e);
+        }
         for (Map.Entry<String, Square> square : squares.entrySet()){
             setSquareOnGrid(square.getValue());
         }
+    }
+
+    public StackPane getBoardComponent() {
+        return board;
     }
 
     public static Map<String, Square> getSquares() {
@@ -38,15 +46,11 @@ public class BoardController implements Initializable {
         //object.setOnAction(this::eventName)
     }
 
-    private void loadFXML(){
-        try{
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("view/boar.fxml"));
+    public void loadFXML() throws Exception{
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/view/board.fxml"));
             loader.setController(this);
-            loader.setRoot(this);
+           //loader.setRoot(this);
             loader.load();
-        }catch (Exception e){
-            System.err.println(e);
-        }
     }
 
     private void setSquareOnGrid(Square square){

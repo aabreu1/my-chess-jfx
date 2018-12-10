@@ -20,9 +20,11 @@ public class SquareFactory {
                 String number       = String.valueOf(row);
                 Square square = new Square(character, number);
                 square.setStyle("-fx-background-color:"+(color ? "white" : "black"));
+                square.text.setStyle("-fx-text-fill:"+(!color ? "white" : "black"));
                 color = !color;
                 squares.put(square.getCardinal(), square);
             }
+            color = !color;
         }
         return squares;
     }
