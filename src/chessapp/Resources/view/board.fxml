@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="boardGrid" alignment="CENTER" gridLinesVisible="true" minHeight="496.0" minWidth="496.0" prefHeight="800.0" prefWidth="800.0" StackPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="12.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="12.5" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <StackPane style="-fx-alignment: ;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>

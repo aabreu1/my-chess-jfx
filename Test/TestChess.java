@@ -1,5 +1,5 @@
-import ChessApp.Controll.GameController;
-import ChessApp.Model.Board;
+import chessapp.controll.GameController;
+import chessapp.model.Board;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class TestChess {
     @Ignore
     public void Creation() {
         GameController game = new GameController();
-        game.BuildUpGame();
+        game.buildUpGame();
         //System.out.println(game.gameBoard.getSquares());
     }
 
